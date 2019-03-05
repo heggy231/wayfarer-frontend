@@ -11,16 +11,16 @@ class Main extends Component{
     render(){
         return(
             <div className="container">
-								<section className="col-12">
-									<Header />
-								</section>
+                <header>
+                    <Header />
+                </header>
                 <section className ="col-1">
-									<Profile /> 
-									<CitiesList/>
+                    <Profile /> 
+                    <CitiesList/>
                 </section> 
                 <section className="col-2"> 
-									<SearchContainer />
-									<PostList />
+                    <SearchContainer />
+                    <PostList />
                 </section> 
             </div>
         );

@@ -5,6 +5,9 @@ import {
     Link,
     Switch
   } from 'react-router-dom'
+import Login from '../LoginForm/Login';
+import SignUp from '../SignupForm/Signup';
+
 //  import the routing components  app is wrap router now we can bring in 
 //   app.js 
 // Route is used to connect paths to components
@@ -28,7 +31,11 @@ class Landing extends Component{
                         {/* <div className="bouncy arrow-point-down"> */}
                             {/* <a className="fas fa-angle-double-down" href="#project"></a> */}
                             {/* effect I was going for:  https://heggy231.github.io/Heggy-portfolio/#project */}
-                            <Link to="/Main">Main</Link>
+                            <Link to="/Login"><button>Login</button></Link>
+                            
+                            <button>SignUp</button>
+                            
+                            
                         {/* </div> */}
                     </div>
                 </div>

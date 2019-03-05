@@ -13,6 +13,7 @@ import {
   Switch
 } from 'react-router-dom'
 import Landing from './component/LandingPage/Landing';
+import Login from './component/LoginForm/Login';
 
 class Home extends Component {
   render() {
@@ -29,6 +30,7 @@ class Home extends Component {
               it keeps matching --exact --- keyword is important!!
           */}
           <Route exact path="/" component={ Landing } />
+          <Route exact path="/Login" component={ Login } />
           <Route exact path="/Main" component={ Main } />
           {/* <Route path="/about" component={ Footer } />
           <Route path="/gallery" component={ CommentForm } />
