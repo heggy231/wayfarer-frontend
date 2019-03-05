@@ -14,6 +14,7 @@ import {
 } from 'react-router-dom'
 import Landing from './component/LandingPage/Landing';
 import Login from './component/LoginForm/Login';
+import Signup from './component/SignupForm/Signup';
 
 class Home extends Component {
   render() {
@@ -31,6 +32,7 @@ class Home extends Component {
           */}
           <Route exact path="/" component={ Landing } />
           <Route exact path="/Login" component={ Login } />
+          <Route exact path="/Signup" component={ Signup } />
           <Route exact path="/Main" component={ Main } />
           {/* <Route path="/about" component={ Footer } />
           <Route path="/gallery" component={ CommentForm } />
