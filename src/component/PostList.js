@@ -6,7 +6,7 @@ class PostList extends Component{
         return(
             <div >
             
-           This is the Cities List.
+           This is the Post List.
 
             </div>
         );
