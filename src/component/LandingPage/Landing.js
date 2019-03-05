@@ -32,7 +32,7 @@ class Landing extends Component{
                             {/* <a className="fas fa-angle-double-down" href="#project"></a> */}
                             {/* effect I was going for:  https://heggy231.github.io/Heggy-portfolio/#project */}
                             <Link to="/Login"><button>Login</button></Link>
-                            <Link to="/SignUp"><button>SignUp</button></Link>
+                            <Link to="/Signup"><button>Signup</button></Link>
                             
                         {/* </div> */}
                     </div>

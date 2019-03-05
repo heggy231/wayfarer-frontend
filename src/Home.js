@@ -41,6 +41,21 @@ class Home extends Component {
   }
 
   // login handleLogin when user clicks login button
+  handleLogIn = (e) => {
+    e.preventDefault()
+    axios.post('http://localhost:3001/user/login', {
+      email: this.state.email,
+      password: this.state.password 
+    })
+    .then( response => {
+      console.log(response);
+      localStorage.token = response.data.signedJwt
+        this.setState({
+          isLoggedIn: true
+        })
+    })
+    .catch(err => console.log(err));
+  }
 
   render() {
     return (
