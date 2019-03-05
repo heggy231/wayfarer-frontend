@@ -6,7 +6,10 @@ class CitiesList extends Component{
         return(
             <div >
             
-           This is the Cities List.
+           {/* <button onclick={this.handleSubmit}><img src={}/>San Francisco</button> */}
+           <button>London</button>
+           <button>Paris</button>
+           <button>Amsterdam</button>
 
             </div>
         );

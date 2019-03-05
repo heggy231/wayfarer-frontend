@@ -1,13 +1,19 @@
-import React,{Component} from 'react';
-
+import React,{Component} from 'react'
+import {Route , Link ,Switch} from 'react-router-dom';
+import Signup from '../LoginForm/Login';
+import Login from '../SignupForm/Signup';
 
 class Landing extends Component{
     render(){
         return(
             <div >
-            
-
-            </div>
+            <div id="subHeader">
+                            <h2>Visit places and Post your experiences</h2>
+                        </div>
+                           <Link to="/Login"><button>Login</button></Link> 
+                           <Link to="/Signup"> <button>SignUp</button></Link> 
+                    </div>
+             
         );
     }
 }
