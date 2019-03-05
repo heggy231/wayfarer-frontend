@@ -31,9 +31,9 @@ class Home extends Component {
               it keeps matching --exact --- keyword is important!!
           */}
           <Route exact path="/" component={ Landing } />
-          <Route exact path="/Login" component={ Login } />
-          <Route exact path="/Signup" component={ Signup } />
-          <Route exact path="/Main" component={ Main } />
+          <Route path="/Login" component={ Login } />
+          <Route path="/Signup" component={ Signup } />
+          <Route path="/Main" component={ Main } />
           {/* <Route path="/about" component={ Footer } />
           <Route path="/gallery" component={ CommentForm } />
           <Route path="/about" component={Main} />
