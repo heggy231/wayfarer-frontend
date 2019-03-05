@@ -12,11 +12,36 @@ import {
   Link,
   Switch
 } from 'react-router-dom'
+import axios from 'axios'
 import Landing from './component/LandingPage/Landing';
 import Login from './component/LoginForm/Login';
 import Signup from './component/SignupForm/Signup';
 
 class Home extends Component {
+
+  // handleInput
+  state = {
+    email: '',
+    password: '',
+    isLoggedIn: false,
+    user: null,
+  }
+
+  componentDidMount() {
+
+  }
+
+  // login input
+  handleInput = (e) => {
+    this.setState({
+      // [e.target.name]: e.target.value
+      // This is to dynamically update object property (when the name of the property is unknown upfront but runtime). This way you could have multiple React inputs having a different name property and using the same onChange handler to update part of the state.
+      [e.target.name]: e.target.value
+    })
+  }
+
+  // login handleLogin when user clicks login button
+
   render() {
     return (
       <div className="Home">
