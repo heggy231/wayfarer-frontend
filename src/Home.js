@@ -121,7 +121,7 @@ class Home extends Component {
             />
 {/*------------- Landing page Routes----------- */}
 
- <Route
+ <Route exact
               path='/'
               render={() => {
                 return (
