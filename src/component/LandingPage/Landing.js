@@ -1,12 +1,13 @@
 import React,{Component} from 'react'
-import {Route , Link ,Switch} from 'react-router-dom';
+import {Route , Link ,Switch} from 'react-router-dom'
 import Signup from '../LoginForm/Login';
 import Login from '../SignupForm/Signup';
+import './Landing.css'
 
 class Landing extends Component{
     render(){
         return(
-            <div >
+            <div className="main">
             <div id="subHeader">
                             <h2>Visit places and Post your experiences</h2>
                         </div>

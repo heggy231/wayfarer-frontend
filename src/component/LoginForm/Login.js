@@ -4,10 +4,10 @@ class Login extends Component{
     render(){
         return(
             <div>
-                <h1>Login</h1>
-               Email : <input type="text" onChange={this.props.handle} placeholder="Email"/> 
-               Password :  <input type="password"  onChange={this.props.handle} placeholder="Password"/> 
-               <button  type="submit" onClick={this.handleLogin}> Login </button>
+                <h2>Login</h2>
+               Email : <input type="text"  name='email' onChange={this.props.handleInput} placeholder="Email"/> 
+               Password :  <input type="password" name='password'  onChange={this.props.handleInput} placeholder="Password"/> 
+               <button  type="submit" onClick={this.props.handleLogIn}> Login </button>
             </div>
         )
     }
