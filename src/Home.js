@@ -1,138 +1,64 @@
 import React, { Component } from 'react';
-import {
-  Route,
-  Switch
-} from 'react-router-dom'
-import axios from 'axios';
-
-import Main from './component/Main';
-import Landing from './component/LandingPage/Landing';
-import SignUpForm from './component/SignupForm/SignupForm'
-
-import LogInForm from './component/LoginForm/LoginForm'
-import LogOut from './component/LoginForm/Logout'
-
-
-//currently working on 
-
-
+// import Header from './component/Header';
 import './Home.css';
-
+import {Route , Link ,Switch} from 'react-router-dom';
+import axios from 'axios';
+import Main from './component/Main';
+import Landing from './component/LandingPage/Landing'
+import Signup from './component/SignupForm/Signup';
+import Login  from './component/LoginForm/Login';
 
 class Home extends Component {
-  state = {
-    email: '',
+  state={
+    email:'',
     password: '',
     isLoggedIn: false,
     user: null
   }
 
-  componentDidMount () {
-    if (localStorage.token) {
-      this.setState({
-        isLoggedIn: true
-      })
-    } else {
-      this.setState({
-        isLoggedIn: false
-      })
+  componentDidMount(){
+    if(localStorage.token){
+      
     }
-  }
 
-  handleLogOut = () => {
-    this.setState({
-      email: '',
-      password: '',
-      isLoggedIn: false
-    })
-    localStorage.clear()
-  }
-
-  handleInput = (e) => {
-    this.setState({
+}
+ handleInput =(e)=>{
+   this.setState({
       [e.target.name]: e.target.value
-    })
-  }
+   })
+ }
 
-  handleSignUp = (e) => {
-    e.preventDefault()
-    axios.post('http://localhost:3001/user/signup', 
-			{ email: this.state.email,
-      	password: this.state.password }
-			)
-      .then( response => {
-        console.log(response)
-        localStorage.token = response.data.signedJwt
-          this.setState({
-            isLoggedIn: true,
-            user: response.data.user
-          })
-      })
-      .catch(err => console.log(err))
-  }
+ handleLogin = (e)=>{
+   e.preventDefault()
+   axios.post('http://localhost:3001/user/login',{
+     email: this.state.email,
+     password: this.state.password
+   })
+   .then(response=>{
+     localStorage.token = response.data.signedJwt
+     this.setState({
+       isLoggedIn : true,
+       user: response.data.user
+     })
+   })
 
-  handleLogIn = (e) => {
-    e.preventDefault()
-    axios.post('http://localhost:3001/user/login', { //<-- save token to local storage
-      email: this.state.email,
-      password: this.state.password
-    })
-    .then( response => {
-      localStorage.token = response.data.signedJwt
-      this.setState({
-        isLoggedIn: true
-      })
-    })
-    .catch(err => console.log(err))
-  }
-
+ }
   render() {
     return (
-      <div className="Home">
+      <div>
+<Switch>
+  <Route  exact path="/" component={Landing} />
+  <Route  path="/Login" component={Login} />
+  <Route  path="/Signup" component={Signup} />
+  <Route  path="/Main" component={Main} />
+</Switch>
 
-        
-        <div >
-          <Switch>
-
-{/*------------- Signup Routes----------- */}
-            <Route path='/signup'
-                render={(props) => {
-                  return (
-                    <SignUpForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />
-                  )
-                }}
-              />
-{/*------------- Logout Routes----------- */}
-            <Route path='/logout'
-              render={(props) => {
-                return (
-                  <LogOut isLoggedIn={this.state.isLoggedIn} handleLogOut={this.handleLogOut} />
-                )
-              }}
-            />
-
-{/*------------- Login Routes----------- */}
-            <Route path='/login'
-              render={(props) => {
-                return (
-                  <LogInForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} />
-                )
-              }}
-            />
-{/*------------- Landing page Routes----------- */}
-
- <Route
-              path='/'
-              render={() => {
-                return (
-                  <Landing isLoggedIn={this.state.isLoggedIn} />
-                )
-              }}
-            />
-
-          </Switch>
-        </div>
       </div>
+      // <div className="Home">
+      //   Hello world! we are here!
+      //   <Header />
+      //   <Main />  what we had on the homepage
+      // </div>
     );
   }
 }

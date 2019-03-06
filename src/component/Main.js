@@ -1,5 +1,7 @@
 import React,{Component} from 'react';
 import SearchContainer from './SearchContainer';
+import Header from './Header';
+import Landing from './LandingPage/Landing';
 import Profile from '../models/Profile';
 import CitiesList from './CitiesList';
 import PostList from './PostList';
