@@ -3,16 +3,22 @@ import './CityInfo.css'
 import {Link} from 'react-router-dom';
 import London from './London';
 import Sydney from './Sydney';
+import SanFrancisco from './SanFrancisco';
+import Seattle from './Seattle';
 
 class CityInfo extends Component {
   render() {
     // if someone click London is clicked and show London in right column
     var selectedCity;
-    debugger;
+    // debugger;
     if (this.props.selectedCity === "London") {
       selectedCity = <London />
     } else if (this.props.selectedCity === "Sydney") {
       selectedCity = <Sydney />
+    } else if (this.props.selectedCity === "SanFrancisco") {
+      selectedCity = <SanFrancisco />
+    } else if (this.props.selectedCity === "Seattle") {
+      selectedCity = <Seattle />
     }
 
     return (
@@ -26,10 +32,14 @@ class CityInfo extends Component {
             <div>Sydney
               <Link to="/CityInfo/Sydney"><button>Sydney CityInfo</button></Link>
             </div>
-            <div>San Francisco</div>
-            <div>Seattle</div>
+            <div>San Francisco
+              <Link to="/CityInfo/SanFrancisco"><button>San Francisco CityInfo</button></Link>
+            </div>
+            <div>Seattle
+              <Link to="/CityInfo/Seattle"><button>Seattle CityInfo</button></Link>
+            </div>
           </div>
-        {/* right column */}
+        {/* right column with one variable selectedCity which renders each city info */}
           <div class="column">more info about my cities
             { selectedCity }
           </div>

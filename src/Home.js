@@ -114,7 +114,7 @@ class Home extends Component {
               />
 
 
-{/*------------- CityInfo - London Routes----------- */}
+{/*------------- CityInfo - Sydney Routes----------- */}
             <Route exact path='/CityInfo/Sydney'
                 render={(props) => {
                   return (
@@ -124,6 +124,25 @@ class Home extends Component {
                 }}
               />
 
+{/*------------- CityInfo - San Francisco Routes----------- */}
+            <Route exact path='/CityInfo/SanFrancisco'
+                render={(props) => {
+                  return (
+                    // passing london as a property inside of XML anything you pass becomes a property
+                    <CityInfo selectedCity="SanFrancisco" isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />
+                  )
+                }}
+              />
+
+{/*------------- CityInfo - Seattle Routes----------- */}
+            <Route exact path='/CityInfo/Seattle'
+                render={(props) => {
+                  return (
+  // passing Seattle as a property inside of XML in turn anything you pass in XML becomes a property
+                    <CityInfo selectedCity="Seattle" isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />
+                  )
+                }}
+              />
 
 {/*------------- Signup Routes----------- */}
             <Route path='/signup'
