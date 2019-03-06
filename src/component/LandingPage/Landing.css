@@ -1,3 +1,4 @@
+.home {}
 #landing-page-flex {
   /* transform: translate(50%, 50%); */
   height: 100vh;
@@ -19,20 +20,32 @@
   */
   /* use outline when testing this doesn't takce up any space! */
   /* outline: 3px red; */
-  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
   align-items: center;
+  background-color: rgba(31, 31, 31, 0.60);
+  border-radius: 20px;
+  color: white;
+}
+.main {
+  background-image: url('./travel.gif');
+  background-size: cover;
+  /* add modern looking overlay adding greyish overlay */
+  background-color: rgba(31, 31, 31, 0.60); /* graphite grey with bit of opacity */
+
 }
 
 
 /* to animate: 1) call the animation name, 2) set keyframes time and (x,y) coordinates*/
-.bouncy {
+/* .bouncy {
   -webkit-animation-name: bounce;
   -webkit-animation-duration: 5s;
   -webkit-animation-iteration-count: infinite;
   animation-name: bounce;
   animation-duration: 5s;
   animation-iteration-count: infinite;
-}
+} */
 /* tell css how bounce will behave */
 /* @keyframes bounce {
   0% {
@@ -41,7 +54,7 @@
   /* https://css-tricks.com/css-keyframe-animation-delay-iterations/ 
    https://css-tricks.com/almanac/properties/a/animation/
   */
-@keyframes bounce {
+/* @keyframes bounce {
   0% {
     transform: translate(0, 0);
   }
@@ -63,4 +76,4 @@
   100% {
     transform: translate(0, 0);
   }
-}
+} */

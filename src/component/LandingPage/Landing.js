@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import './Landing.css'
+import './Landing.css';
 import {
     Route,
     Link,
@@ -18,7 +18,7 @@ import SignUp from '../SignupForm/Signup';
 class Landing extends Component{
     render(){
         return(
-            <div >
+            <div className="main">
               <div id="home">
                 <div id="landing-page-flex">
                     <div className="top-level-wrapper-flex">
