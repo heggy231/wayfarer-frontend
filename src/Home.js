@@ -13,10 +13,6 @@ import LogInForm from './component/LoginForm/LoginForm'
 import LogOut from './component/LoginForm/Logout'
 import CityInfo from './component/CityInfoPage/CityInfo'
 
-
-//currently working on 
-
-
 import './Home.css';
 
 
@@ -107,7 +103,7 @@ class Home extends Component {
             <Route exact path='/CityInfo/London'
                 render={(props) => {
                   return (
-                    // passing london as a property inside of XML anything you pass becomes a property
+ // passing London as a property inside of XML in turn anything you pass in XML becomes a property
                     <CityInfo selectedCity="London" isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />
                   )
                 }}
@@ -118,7 +114,7 @@ class Home extends Component {
             <Route exact path='/CityInfo/Sydney'
                 render={(props) => {
                   return (
-                    // passing london as a property inside of XML anything you pass becomes a property
+ // passing Sydney as a property inside of XML in turn anything you pass in XML becomes a property
                     <CityInfo selectedCity="Sydney" isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />
                   )
                 }}
@@ -128,7 +124,7 @@ class Home extends Component {
             <Route exact path='/CityInfo/SanFrancisco'
                 render={(props) => {
                   return (
-                    // passing london as a property inside of XML anything you pass becomes a property
+// passing SanFrancisco as a property inside of XML in turn anything you pass in XML becomes a property
                     <CityInfo selectedCity="SanFrancisco" isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />
                   )
                 }}
@@ -138,7 +134,7 @@ class Home extends Component {
             <Route exact path='/CityInfo/Seattle'
                 render={(props) => {
                   return (
-  // passing Seattle as a property inside of XML in turn anything you pass in XML becomes a property
+// passing Seattle as a property inside of XML in turn anything you pass in XML becomes a property
                     <CityInfo selectedCity="Seattle" isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />
                   )
                 }}

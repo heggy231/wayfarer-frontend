@@ -8,9 +8,10 @@ import Seattle from './Seattle';
 
 class CityInfo extends Component {
   render() {
-    // if someone click London is clicked and show London in right column
+    // if someone click London or anyCity and show that city's post info to the right column
     var selectedCity;
     // debugger;
+    // rember we are passing prop from home's route <CityInfo selectedCity="London" 
     if (this.props.selectedCity === "London") {
       selectedCity = <London />
     } else if (this.props.selectedCity === "Sydney") {
