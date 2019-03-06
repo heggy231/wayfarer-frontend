@@ -11,6 +11,7 @@ import SignUpForm from './component/SignupForm/SignupForm'
 
 import LogInForm from './component/LoginForm/LoginForm'
 import LogOut from './component/LoginForm/Logout'
+import CityInfo from './component/CityInfoPage/CityInfo'
 
 
 //currently working on 
@@ -93,6 +94,36 @@ class Home extends Component {
         
         <div >
           <Switch>
+{/*------------- CityInfo Routes----------- */}
+            <Route exact path='/CityInfo'
+                render={(props) => {
+                  return (
+                    <CityInfo isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />
+                  )
+                }}
+              />
+
+{/*------------- CityInfo - London Routes----------- */}
+            <Route exact path='/CityInfo/London'
+                render={(props) => {
+                  return (
+                    // passing london as a property inside of XML anything you pass becomes a property
+                    <CityInfo selectedCity="London" isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />
+                  )
+                }}
+              />
+
+
+{/*------------- CityInfo - London Routes----------- */}
+            <Route exact path='/CityInfo/Sydney'
+                render={(props) => {
+                  return (
+                    // passing london as a property inside of XML anything you pass becomes a property
+                    <CityInfo selectedCity="Sydney" isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />
+                  )
+                }}
+              />
+
 
 {/*------------- Signup Routes----------- */}
             <Route path='/signup'
@@ -120,9 +151,8 @@ class Home extends Component {
               }}
             />
 {/*------------- Landing page Routes----------- */}
-
- <Route exact
-              path='/'
+{/* root direct displays landing component <Landing */}
+            <Route exact path='/'
               render={() => {
                 return (
                   <Landing isLoggedIn={this.state.isLoggedIn} />

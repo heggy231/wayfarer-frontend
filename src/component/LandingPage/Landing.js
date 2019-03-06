@@ -10,7 +10,7 @@ class Landing extends Component{
             <div >
                 <div id="landing-page-flex">
 
-                         <div className="top-level-wrapper-flex">
+                    <div className="top-level-wrapper-flex">
 
                         <div id="top-level">
                             <h1>Wayfarer</h1>
@@ -26,7 +26,9 @@ class Landing extends Component{
 
                         </div>
 
-
+                        <div id="citiesList">
+                            <Link to="/CityInfo"><button>CityInfo</button></Link>
+                        </div>
 
                     </div>
                 </div>
