@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import Header from './component/Header';
+// import Header from './component/Header';
 import './Home.css';
+import {Route , Link ,Switch} from 'react-router-dom';
+import axios from 'axios';
 import Main from './component/Main';
+<<<<<<< HEAD
 // Route is used to connect paths to components
 // Link is used to create links to Route paths.
 // Switch will find the first route to match a given path. Once found, it will stop looking, just like a Javascript switch statement
@@ -79,8 +82,63 @@ class Home extends Component {
           <Route path="/about" component={Main} />
           <Route path = "/blog" exact component = {Footer}/> */}
         </Switch>
+=======
+import Landing from './component/LandingPage/Landing'
+import Signup from './component/SignupForm/Signup';
+import Login  from './component/LoginForm/Login';
+
+class Home extends Component {
+  state={
+    email:'',
+    password: '',
+    isLoggedIn: false,
+    user: null
+  }
+
+  componentDidMount(){
+    if(localStorage.token){
+      
+    }
+
+}
+ handleInput =(e)=>{
+   this.setState({
+      [e.target.name]: e.target.value
+   })
+ }
+
+ handleLogin = (e)=>{
+   e.preventDefault()
+   axios.post('http://localhost:3001/user/login',{
+     email: this.state.email,
+     password: this.state.password
+   })
+   .then(response=>{
+     localStorage.token = response.data.signedJwt
+     this.setState({
+       isLoggedIn : true,
+       user: response.data.user
+     })
+   })
+
+ }
+  render() {
+    return (
+      <div>
+<Switch>
+  <Route  exact path="/" component={Landing} />
+  <Route  path="/Login" component={Login} />
+  <Route  path="/Signup" component={Signup} />
+  <Route  path="/Main" component={Main} />
+</Switch>
+>>>>>>> 6d941bd1c89b80ef5f1fc5548ffeb57491aadfa4
 
       </div>
+      // <div className="Home">
+      //   Hello world! we are here!
+      //   <Header />
+      //   <Main />  what we had on the homepage
+      // </div>
     );
   }
 }

@@ -5,15 +5,13 @@ import Landing from './LandingPage/Landing';
 import Profile from '../models/Profile';
 import CitiesList from './CitiesList';
 import PostList from './PostList';
-
+import Header from '../component/Header';
 
 class Main extends Component{
     render(){
         return(
             <div className="container">
-                <header>
-                    <Header />
-                </header>
+                <Header />  
                 <section className ="col-1">
                     <Profile /> 
                     <CitiesList/>

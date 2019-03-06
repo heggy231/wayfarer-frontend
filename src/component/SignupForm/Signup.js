@@ -1,16 +1,17 @@
-import React, { Component } from 'react';
+import React,{Component} from 'react';
 
-class Signup extends Component {
-  render() {
-    return (
-      <div>
-        <h2>Sign Up</h2>
-        <input type="text" placeholder="Enter Email" name="email" onChange={this.props.handleInput}></input>
-        <input type="text" placeholder="Enter Password" name="password" onChange={this.props.handleInput}></input>
-        <button onClick={this.handleLogin} type="submit" onClick={this.props.handleSignUp}>SignUp</button>
-      </div>
-    );
-  }
+class SignUp extends Component{
+    render(){
+        return(
+            <div>
+                <h1> SignUp</h1>
+               Email : <input type="text"  onChange={this.props.handle} placeholder="Email"/> 
+               Password :  <input type="password"  onChange={this.props.handle} placeholder="Password"/> 
+               <button type="submit" onClick={this.handleLogin}> Login </button>
+            </div>
+        )
+    }
 }
 
-export default Signup;
+
+export default SignUp
