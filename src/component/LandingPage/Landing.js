@@ -1,3 +1,4 @@
+
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
 import './Landing.css'
@@ -7,6 +8,7 @@ import './Landing.css'
 class Landing extends Component{
     render(){
         return(
+  
             <div >
                 <div id="landing-page-flex">
 
@@ -26,12 +28,11 @@ class Landing extends Component{
 
                         </div>
 
-
+                       </div>
 
                     </div>
                 </div>
-            </div>
-        );
+           )
     }
 }
 
