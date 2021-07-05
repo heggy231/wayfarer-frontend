@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_two_columns_flex */

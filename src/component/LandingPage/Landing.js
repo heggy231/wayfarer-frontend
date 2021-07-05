@@ -1,16 +1,13 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
 import './Landing.css'
-
-
-
 class Landing extends Component{
     render(){
         return(
             <div >
                 <div id="landing-page-flex">
 
-                         <div className="top-level-wrapper-flex">
+                    <div className="top-level-wrapper-flex">
 
                         <div id="top-level">
                             <h1>Wayfarer</h1>
@@ -26,7 +23,9 @@ class Landing extends Component{
 
                         </div>
 
-
+                        <div id="citiesList">
+                            <Link to="/CityInfo"><button>CityInfo</button></Link>
+                        </div>
 
                     </div>
                 </div>
